@@ -1,0 +1,32 @@
+# Controller sampling frequency in Hz (should not be changed)
+sampling_freq : 30 
+
+# Previewed steps (can be changed, but not recommended)
+# preview_step/sampling_f = previewed time taken
+preview_step  : 50
+
+# Swing damping value, in [0, 1]
+swing_damp    : 1
+
+# The distance between the center of left and right foot in meter
+foot_width    : 0.25
+
+# The height of CoM in meter (can be taken as the height of robot's stand)
+com_height    : 0.4
+
+# Maximum and normal distances and frequencies each step taken (x and y direction) in meter and Hz
+max_step_dist_x : 0.12
+max_step_dist_y : 0.12
+max_omega       : 1.57079632679
+max_step_freq   : 5
+nor_step_dist_x : 0.07
+nor_step_dist_y : 0.05
+nor_step_freq   : 2
+
+# control gains
+Q_ex  : 2.0
+Q_xx  : 4.0
+R_x   : 0.001
+Q_ey  : 2.0
+Q_xy  : 4.0
+R_y   : 0.001
