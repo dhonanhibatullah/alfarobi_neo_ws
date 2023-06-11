@@ -3,7 +3,7 @@ sampling_freq : 30
 
 # Previewed steps (can be changed, but not recommended)
 # preview_step/sampling_f = previewed time taken
-preview_step  : 50
+preview_step  : 30
 
 # Swing damping value, in [0, 1]
 swing_damp    : 1
@@ -11,10 +11,14 @@ swing_damp    : 1
 # The distance between the center of left and right foot in meter
 foot_width    : 0.25
 
+# Lifted foot height in meter
+step_height   : 0.02
+
 # The height of CoM in meter (can be taken as the height of robot's stand)
 com_height    : 0.4
 
 # Maximum and normal distances and frequencies each step taken (x and y direction) in meter and Hz
+# NOTE: max_step_dist_y < foot_width
 max_step_dist_x : 0.12
 max_step_dist_y : 0.12
 max_omega       : 1.57079632679

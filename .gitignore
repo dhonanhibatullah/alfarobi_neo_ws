@@ -3,3 +3,5 @@ build/
 devel/
 *.log
 *.catkin_workspace
+
+src/alfarobi_lib/plot/

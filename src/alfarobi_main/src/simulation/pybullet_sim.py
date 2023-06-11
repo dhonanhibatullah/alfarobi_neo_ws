@@ -28,7 +28,7 @@ simulation_settings_config  = yaml.load(simulation_settings_yaml, Loader=yaml.Sa
 
 # Start ROS node
 rospy.init_node(
-    name        = robot_information_config['name'] + '_python_publisher_node', 
+    name        = robot_information_config['name'] + '_pybullet_sim_node', 
     anonymous   = False
 )
 ros_rate = rospy.Rate(simulation_settings_config['simulation_fps'])
@@ -48,7 +48,8 @@ robot_inst = pbc.PybulletController(
     name            = robot_information_config['name'], 
     plane_id        = plane_id, 
     robot_id        = robot_id, 
-    joint_config    = simulation_settings_config['joint_config']
+    joint_config    = simulation_settings_config['joint_config'],
+    time_config     = simulation_settings_config['simulation_fps']
 )
 
 
@@ -59,12 +60,6 @@ if __name__ == '__main__':
 
     try:
         while not rospy.is_shutdown():
-            
-
-
-            # Read and write the joints' state
-            # Increment the simulation
-            # Sleep within the fps
             robot_inst.readWrite()
             pb.stepSimulation()
             ros_rate.sleep()

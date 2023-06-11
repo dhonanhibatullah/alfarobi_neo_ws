@@ -3,6 +3,9 @@
     * dhonan.hibatullah@gmail.com, open for any questions
 */   
 
+#ifndef FUNCTION_H
+#define FUNCTION_H
+
 #define NEGLIGIBLE_VAL      0.01
 #define _USE_MATH_DEFINES
 
@@ -17,3 +20,6 @@
 namespace alfarobi {
     
 }
+
+
+#endif

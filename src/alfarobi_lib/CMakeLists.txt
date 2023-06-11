@@ -5,6 +5,7 @@ project(alfarobi_lib)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
+  roslib
   std_msgs
   geometry_msgs
   message_generation
@@ -13,12 +14,13 @@ find_package(catkin REQUIRED COMPONENTS
 # Add custom messages
 add_message_files(
   FILES
-  JointVal.msg
+    JointTargetVal.msg
+    JointCurrentVal.msg
 )
 generate_messages(
   DEPENDENCIES
-  std_msgs
-  geometry_msgs
+    std_msgs
+    geometry_msgs
 )
 
 # Add as a package
@@ -32,3 +34,7 @@ include_directories(
   include 
   ${catkin_INCLUDE_DIRS}
 )
+
+# Add library
+add_library(linear_algebra src/alfarobi_lib/LinearAlgebra.cpp)
+add_library(plotter src/alfarobi_lib/Plotter.cpp)

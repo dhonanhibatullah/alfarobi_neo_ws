@@ -3,11 +3,11 @@ project(alfarobi_main)
 
 # List all the dependencies
 find_package(catkin REQUIRED COMPONENTS
-  alfarobi_lib
   roscpp
   rospy
   std_msgs
   geometry_msgs
+  alfarobi_lib
 )
 
 # This is basically used in every packages
@@ -19,7 +19,7 @@ catkin_package(
     alfarobi_lib
 )
 
-# Don't forget to include header files from alfarobi_lib package
+# Include header files from alfarobi_lib package
 include_directories(
   include 
   ${catkin_INCLUDE_DIRS}

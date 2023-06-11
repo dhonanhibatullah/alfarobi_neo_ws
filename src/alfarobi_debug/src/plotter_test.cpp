@@ -1,3 +1,4 @@
+#include <vector>
 #include <alfarobi_lib/Math/Plotter.h>
 
 
@@ -5,7 +6,7 @@ int main() {
 
     /* Create plotter class */
     alfarobi::Plotter plt = alfarobi::Plotter(2, 2);
-    alfarobi::Plotter::plotconfig conf;
+    alfarobi::Plotter::PlotConfig cfg;
 
 
 
@@ -14,17 +15,17 @@ int main() {
 
     std::vector<double> x_val1 = {0, 1, 2, 3, 4, 5, 6};
     std::vector<double> y_val1 = {0, 1, 3, 1, -2, 1, 3};
-    conf.label = "f_1";
-    conf.line_color = "red";
-    conf.plot_style = PLOT_STYLE_INTERPOLATE;
-    plt.plot(x_val1, y_val1, conf, 0, 0);
+    cfg.label = "f_1";
+    cfg.line_color = "red";
+    cfg.plot_style = PLOT_STYLE_INTERPOLATE;
+    plt.plot(x_val1, y_val1, cfg, 0, 0);
 
     std::vector<double> x_val2 = {0, 1, 2, 3, 4, 5, 6};
     std::vector<double> y_val2 = {0, 2, 5, -2, -4, 0, -1};   
-    conf.label = "f_2";
-    conf.line_color = "blue";
-    conf.plot_style = PLOT_STYLE_INTERPOLATE;
-    plt.plot(x_val2, y_val2, conf, 0, 0);
+    cfg.label = "f_2";
+    cfg.line_color = "blue";
+    cfg.plot_style = PLOT_STYLE_INTERPOLATE;
+    plt.plot(x_val2, y_val2, cfg, 0, 0);
 
 
 
@@ -33,10 +34,10 @@ int main() {
 
     std::vector<double> x_val3 = {0, 1, 2, 3, 4, 5, 6};
     std::vector<double> y_val3 = {0, 2, 5, -2, -4, 0, -1};   
-    conf.label = "f_3";
-    conf.line_color = "purple";
-    conf.plot_style = PLOT_STYLE_INTERPOLATE;
-    plt.plot(x_val3, y_val3, conf, 0, 1);
+    cfg.label = "f_3";
+    cfg.line_color = "purple";
+    cfg.plot_style = PLOT_STYLE_INTERPOLATE;
+    plt.plot(x_val3, y_val3, cfg, 0, 1);
 
 
 
@@ -45,10 +46,10 @@ int main() {
 
     std::vector<double> x_val4 = {0, 1, 2, 3, 4, 5, 6};
     std::vector<double> y_val4 = {0, 2, 5, -2, -4, 0, -1};   
-    conf.label = "f_4";
-    conf.line_color = "brown";
-    conf.plot_style = PLOT_STYLE_INTERPOLATE;
-    plt.plot(x_val4, y_val4, conf, 1, 0);
+    cfg.label = "f_4";
+    cfg.line_color = "brown";
+    cfg.plot_style = PLOT_STYLE_INTERPOLATE;
+    plt.plot(x_val4, y_val4, cfg, 1, 0);
 
 
 
@@ -57,10 +58,10 @@ int main() {
 
     std::vector<double> x_val5 = {0, 1, 2, 3, 4, 5, 6};
     std::vector<double> y_val5 = {0, 2, 5, -2, -4, 0, -1};   
-    conf.label = "f_5";
-    conf.line_color = "green";
-    conf.plot_style = PLOT_STYLE_INTERPOLATE;
-    plt.plot(x_val5, y_val5, conf, 1, 1);
+    cfg.label = "f_5";
+    cfg.line_color = "green";
+    cfg.plot_style = PLOT_STYLE_INTERPOLATE;
+    plt.plot(x_val5, y_val5, cfg, 1, 1);
 
 
 

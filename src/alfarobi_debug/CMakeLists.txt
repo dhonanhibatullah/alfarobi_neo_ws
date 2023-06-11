@@ -3,12 +3,12 @@ project(alfarobi_debug)
 
 # List all the dependencies
 find_package(catkin REQUIRED COMPONENTS
-  alfarobi_lib
   roscpp
   rospy
   roslib
   std_msgs
   geometry_msgs
+  alfarobi_lib
 )
 find_package(yaml-cpp REQUIRED)
 
@@ -30,4 +30,4 @@ include_directories(
 
 # Compile executables
 add_executable(plotter_test src/plotter_test.cpp)
-target_link_libraries(plotter_test ${catkin_LIBRARIES})
+target_link_libraries(plotter_test plotter ${catkin_LIBRARIES})

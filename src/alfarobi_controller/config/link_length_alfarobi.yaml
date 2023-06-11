@@ -1,0 +1,10 @@
+base_ankle    : 0
+ankle_knee    : 0
+knee_hip      : 0
+hip_pelvis    : 0
+pelvis_com_x  : 0
+pelvis_com_y  : 0
+pelvis_com_z  : 0
+pelvis_cam_x  : 0
+pelvis_cam_y  : 0
+pelvis_cam_z  : 0
